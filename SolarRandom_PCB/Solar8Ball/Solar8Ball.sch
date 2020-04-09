@@ -2,33 +2,9 @@ EESchema Schematic File Version 4
 LIBS:SolarSpinner-rescue
 LIBS:power
 LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:regul
 LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
 LIBS:audio
 LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:matts_components
 LIBS:Solar8Ball-cache
 EELAYER 29 0
 EELAYER END
@@ -200,7 +176,7 @@ U 1 1 58FDE60A
 P 1200 1750
 F 0 "P1" H 1200 1900 50  0000 C CNN
 F 1 "SOLAR" V 1300 1750 50  0000 C CNN
-F 2 "REInnovationFootprint:SIL-2_screw_terminal" H 1200 1750 50  0001 C CNN
+F 2 "REInnovationFootprint:Pin_Header_Straight_1x02" H 1200 1750 50  0001 C CNN
 F 3 "" H 1200 1750 50  0000 C CNN
 	1    1200 1750
 	-1   0    0    -1  
@@ -218,12 +194,12 @@ Connection ~ 6400 6100
 $Comp
 L matts_components:GND #PWR010
 U 1 1 58FDEB29
-P 7700 2600
-F 0 "#PWR010" H 7700 2350 50  0001 C CNN
-F 1 "GND" H 7700 2450 50  0000 C CNN
-F 2 "" H 7700 2600 50  0000 C CNN
-F 3 "" H 7700 2600 50  0000 C CNN
-	1    7700 2600
+P 8900 3250
+F 0 "#PWR010" H 8900 3000 50  0001 C CNN
+F 1 "GND" H 8900 3100 50  0000 C CNN
+F 2 "" H 8900 3250 50  0000 C CNN
+F 3 "" H 8900 3250 50  0000 C CNN
+	1    8900 3250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -264,71 +240,11 @@ Wire Wire Line
 	4650 5350 3400 5350
 Wire Wire Line
 	3400 5350 3400 5600
-Wire Wire Line
-	3500 5900 3200 5900
-$Comp
-L power:VCC #PWR03
-U 1 1 58FE0109
-P 3950 6650
-F 0 "#PWR03" H 3950 6500 50  0001 C CNN
-F 1 "VCC" H 3950 6800 50  0000 C CNN
-F 2 "" H 3950 6650 50  0000 C CNN
-F 3 "" H 3950 6650 50  0000 C CNN
-	1    3950 6650
-	1    0    0    -1  
-$EndComp
-$Comp
-L matts_components:GND #PWR04
-U 1 1 58FE014A
-P 3950 7350
-F 0 "#PWR04" H 3950 7100 50  0001 C CNN
-F 1 "GND" H 3950 7200 50  0000 C CNN
-F 2 "" H 3950 7350 50  0000 C CNN
-F 3 "" H 3950 7350 50  0000 C CNN
-	1    3950 7350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 7250 3950 7250
-Wire Wire Line
-	4050 6650 3950 6650
 Connection ~ 3250 5700
 Connection ~ 3300 5800
-Wire Wire Line
-	2950 6000 3250 6000
 Connection ~ 3400 5600
-$Comp
-L Connector:Conn_01x07_Male P3
-U 1 1 59173C75
-P 4250 6950
-F 0 "P3" H 4250 7350 50  0000 C CNN
-F 1 "HEADER" V 4150 6950 50  0000 C CNN
-F 2 "REInnovationFootprint:SIL-7_DIO" H 4250 6950 50  0001 C CNN
-F 3 "" H 4250 6950 50  0000 C CNN
-	1    4250 6950
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	4050 7150 3100 7150
-Wire Wire Line
-	3100 7150 3100 5600
-Wire Wire Line
-	4050 7050 3050 7050
-Wire Wire Line
-	3050 7050 3050 5700
-Wire Wire Line
-	3150 6950 4050 6950
-Wire Wire Line
-	3150 6950 3150 5800
-Wire Wire Line
-	4050 6850 3200 6850
-Wire Wire Line
-	3200 6850 3200 5900
-Connection ~ 3200 5900
 Wire Wire Line
 	3350 6100 3500 6100
-Wire Wire Line
-	4050 6750 3250 6750
 $Comp
 L Connector:Conn_01x01_Male P4
 U 1 1 5917491E
@@ -351,9 +267,6 @@ F 12 "~" H 6050 7300 60  0001 C CNN "Cost"
 $EndComp
 NoConn ~ 6050 7500
 Wire Wire Line
-	3250 6750 3250 6000
-Connection ~ 3250 6000
-Wire Wire Line
 	4650 5050 4650 5350
 Wire Wire Line
 	3350 5150 3350 6100
@@ -365,10 +278,8 @@ Wire Notes Line
 	500  3950 11200 3950
 Wire Notes Line
 	4300 3950 4300 500 
-Text Notes 1150 6250 0    60   ~ 0
+Text Notes 1550 5400 0    60   ~ 0
 ATTiny85 Arduino Pins:\nIC Pin:       Arduino Ref:\n1                5/A0/RST\n2                3/A3\n3                4/A2\n4                GND\n5                0 - PWM\n6                1 - PWM\n7                2/A1\n8                +Supply
-Wire Wire Line
-	3150 5800 3300 5800
 Text Notes 4950 5200 0    60   ~ 0
 ISP Connections:\n1 - MISO\n2 - Vcc\n3 - SCK\n4 - MOSI\n5 - RESET\n6 - GND\n
 Wire Wire Line
@@ -387,25 +298,8 @@ Wire Wire Line
 	3300 5800 3500 5800
 Wire Wire Line
 	3400 5600 3500 5600
-Wire Wire Line
-	3050 5700 3250 5700
-Wire Wire Line
-	3200 5900 2950 5900
-Wire Wire Line
-	3250 6000 3500 6000
-Wire Wire Line
-	3100 5600 3400 5600
 Text HLabel 2950 6000 0    60   Input ~ 0
 LED0
-Wire Wire Line
-	2950 5600 3100 5600
-Connection ~ 3100 5600
-Wire Wire Line
-	2950 5700 3050 5700
-Connection ~ 3050 5700
-Wire Wire Line
-	2950 5800 3150 5800
-Connection ~ 3150 5800
 $Comp
 L Device:Solar_Cells SC1
 U 1 1 58A49F68
@@ -427,164 +321,162 @@ F 13 "~" H 1750 1850 60  0001 C CNN "Supplier 2 Cost"
 	1    1750 1850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3950 7350 3950 7250
 $Comp
 L Connector:Conn_01x02_Male P6
 U 1 1 58FDE4BD
-P 8100 2150
-F 0 "P6" H 8100 2300 50  0000 C CNN
-F 1 "SWITCH" V 8000 2100 50  0000 C CNN
-F 2 "REInnovationFootprint:SIL-2_screw_terminal" H 8100 2150 50  0001 C CNN
-F 3 "" H 8100 2150 50  0000 C CNN
-	1    8100 2150
+P 9300 2800
+F 0 "P6" H 9300 2950 50  0000 C CNN
+F 1 "SWITCH" V 9200 2750 50  0000 C CNN
+F 2 "REInnovationFootprint:SIL-2_screw_terminal" H 9300 2800 50  0001 C CNN
+F 3 "" H 9300 2800 50  0000 C CNN
+	1    9300 2800
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:LED D2
 U 1 1 5E8E2B23
-P 5800 1150
-F 0 "D2" H 5800 1250 50  0000 C CNN
-F 1 "LED" H 5800 1050 50  0000 C CNN
-F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 5800 1150 50  0001 C CNN
-F 3 "" H 5800 1150 50  0000 C CNN
-F 4 "~" H 5800 1150 60  0000 C CNN "Notes"
-F 5 "5mm White LED ?" H 5800 1150 60  0001 C CNN "Description"
-F 6 "~" H 5800 1150 60  0001 C CNN "Manufacturer"
-F 7 "~" H 5800 1150 60  0001 C CNN "Manufacturer Part No"
-F 8 "Aliexpress" H 5800 1150 60  0001 C CNN "Supplier 1"
-F 9 "~" H 5800 1150 60  0001 C CNN "Supplier 1 Part No"
-F 10 "0.1" H 5800 1150 60  0001 C CNN "Supplier 1 Cost"
-F 11 "~" H 5800 1150 60  0001 C CNN "Supplier 2"
-F 12 "~" H 5800 1150 60  0001 C CNN "Supplier 2 Part No"
-F 13 "~" H 5800 1150 60  0001 C CNN "Supplier 2 Cost"
-	1    5800 1150
+P 6600 1350
+F 0 "D2" H 6600 1450 50  0000 C CNN
+F 1 "LED" H 6600 1250 50  0000 C CNN
+F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 6600 1350 50  0001 C CNN
+F 3 "" H 6600 1350 50  0000 C CNN
+F 4 "~" H 6600 1350 60  0000 C CNN "Notes"
+F 5 "5mm White LED ?" H 6600 1350 60  0001 C CNN "Description"
+F 6 "~" H 6600 1350 60  0001 C CNN "Manufacturer"
+F 7 "~" H 6600 1350 60  0001 C CNN "Manufacturer Part No"
+F 8 "Aliexpress" H 6600 1350 60  0001 C CNN "Supplier 1"
+F 9 "~" H 6600 1350 60  0001 C CNN "Supplier 1 Part No"
+F 10 "0.1" H 6600 1350 60  0001 C CNN "Supplier 1 Cost"
+F 11 "~" H 6600 1350 60  0001 C CNN "Supplier 2"
+F 12 "~" H 6600 1350 60  0001 C CNN "Supplier 2 Part No"
+F 13 "~" H 6600 1350 60  0001 C CNN "Supplier 2 Cost"
+	1    6600 1350
 	0    -1   1    0   
 $EndComp
 $Comp
 L Device:LED D3
 U 1 1 5E8E54E3
-P 5500 1700
-F 0 "D3" H 5500 1800 50  0000 C CNN
-F 1 "LED" H 5500 1600 50  0000 C CNN
-F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 5500 1700 50  0001 C CNN
-F 3 "" H 5500 1700 50  0000 C CNN
-F 4 "~" H 5500 1700 60  0000 C CNN "Notes"
-F 5 "5mm White LED ?" H 5500 1700 60  0001 C CNN "Description"
-F 6 "~" H 5500 1700 60  0001 C CNN "Manufacturer"
-F 7 "~" H 5500 1700 60  0001 C CNN "Manufacturer Part No"
-F 8 "Aliexpress" H 5500 1700 60  0001 C CNN "Supplier 1"
-F 9 "~" H 5500 1700 60  0001 C CNN "Supplier 1 Part No"
-F 10 "0.1" H 5500 1700 60  0001 C CNN "Supplier 1 Cost"
-F 11 "~" H 5500 1700 60  0001 C CNN "Supplier 2"
-F 12 "~" H 5500 1700 60  0001 C CNN "Supplier 2 Part No"
-F 13 "~" H 5500 1700 60  0001 C CNN "Supplier 2 Cost"
-	1    5500 1700
+P 6300 1900
+F 0 "D3" H 6300 2000 50  0000 C CNN
+F 1 "LED" H 6300 1800 50  0000 C CNN
+F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 6300 1900 50  0001 C CNN
+F 3 "" H 6300 1900 50  0000 C CNN
+F 4 "~" H 6300 1900 60  0000 C CNN "Notes"
+F 5 "5mm White LED ?" H 6300 1900 60  0001 C CNN "Description"
+F 6 "~" H 6300 1900 60  0001 C CNN "Manufacturer"
+F 7 "~" H 6300 1900 60  0001 C CNN "Manufacturer Part No"
+F 8 "Aliexpress" H 6300 1900 60  0001 C CNN "Supplier 1"
+F 9 "~" H 6300 1900 60  0001 C CNN "Supplier 1 Part No"
+F 10 "0.1" H 6300 1900 60  0001 C CNN "Supplier 1 Cost"
+F 11 "~" H 6300 1900 60  0001 C CNN "Supplier 2"
+F 12 "~" H 6300 1900 60  0001 C CNN "Supplier 2 Part No"
+F 13 "~" H 6300 1900 60  0001 C CNN "Supplier 2 Cost"
+	1    6300 1900
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:LED D4
 U 1 1 5E8E7E09
-P 5800 1750
-F 0 "D4" H 5800 1850 50  0000 C CNN
-F 1 "LED" H 5800 1650 50  0000 C CNN
-F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 5800 1750 50  0001 C CNN
-F 3 "" H 5800 1750 50  0000 C CNN
-F 4 "~" H 5800 1750 60  0000 C CNN "Notes"
-F 5 "5mm White LED ?" H 5800 1750 60  0001 C CNN "Description"
-F 6 "~" H 5800 1750 60  0001 C CNN "Manufacturer"
-F 7 "~" H 5800 1750 60  0001 C CNN "Manufacturer Part No"
-F 8 "Aliexpress" H 5800 1750 60  0001 C CNN "Supplier 1"
-F 9 "~" H 5800 1750 60  0001 C CNN "Supplier 1 Part No"
-F 10 "0.1" H 5800 1750 60  0001 C CNN "Supplier 1 Cost"
-F 11 "~" H 5800 1750 60  0001 C CNN "Supplier 2"
-F 12 "~" H 5800 1750 60  0001 C CNN "Supplier 2 Part No"
-F 13 "~" H 5800 1750 60  0001 C CNN "Supplier 2 Cost"
-	1    5800 1750
+P 6600 1950
+F 0 "D4" H 6600 2050 50  0000 C CNN
+F 1 "LED" H 6600 1850 50  0000 C CNN
+F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 6600 1950 50  0001 C CNN
+F 3 "" H 6600 1950 50  0000 C CNN
+F 4 "~" H 6600 1950 60  0000 C CNN "Notes"
+F 5 "5mm White LED ?" H 6600 1950 60  0001 C CNN "Description"
+F 6 "~" H 6600 1950 60  0001 C CNN "Manufacturer"
+F 7 "~" H 6600 1950 60  0001 C CNN "Manufacturer Part No"
+F 8 "Aliexpress" H 6600 1950 60  0001 C CNN "Supplier 1"
+F 9 "~" H 6600 1950 60  0001 C CNN "Supplier 1 Part No"
+F 10 "0.1" H 6600 1950 60  0001 C CNN "Supplier 1 Cost"
+F 11 "~" H 6600 1950 60  0001 C CNN "Supplier 2"
+F 12 "~" H 6600 1950 60  0001 C CNN "Supplier 2 Part No"
+F 13 "~" H 6600 1950 60  0001 C CNN "Supplier 2 Cost"
+	1    6600 1950
 	0    -1   1    0   
 $EndComp
 $Comp
 L Device:LED D5
 U 1 1 5E8EA548
-P 5500 2300
-F 0 "D5" H 5500 2400 50  0000 C CNN
-F 1 "LED" H 5500 2200 50  0000 C CNN
-F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 5500 2300 50  0001 C CNN
-F 3 "" H 5500 2300 50  0000 C CNN
-F 4 "~" H 5500 2300 60  0000 C CNN "Notes"
-F 5 "5mm White LED ?" H 5500 2300 60  0001 C CNN "Description"
-F 6 "~" H 5500 2300 60  0001 C CNN "Manufacturer"
-F 7 "~" H 5500 2300 60  0001 C CNN "Manufacturer Part No"
-F 8 "Aliexpress" H 5500 2300 60  0001 C CNN "Supplier 1"
-F 9 "~" H 5500 2300 60  0001 C CNN "Supplier 1 Part No"
-F 10 "0.1" H 5500 2300 60  0001 C CNN "Supplier 1 Cost"
-F 11 "~" H 5500 2300 60  0001 C CNN "Supplier 2"
-F 12 "~" H 5500 2300 60  0001 C CNN "Supplier 2 Part No"
-F 13 "~" H 5500 2300 60  0001 C CNN "Supplier 2 Cost"
-	1    5500 2300
+P 6300 2500
+F 0 "D5" H 6300 2600 50  0000 C CNN
+F 1 "LED" H 6300 2400 50  0000 C CNN
+F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 6300 2500 50  0001 C CNN
+F 3 "" H 6300 2500 50  0000 C CNN
+F 4 "~" H 6300 2500 60  0000 C CNN "Notes"
+F 5 "5mm White LED ?" H 6300 2500 60  0001 C CNN "Description"
+F 6 "~" H 6300 2500 60  0001 C CNN "Manufacturer"
+F 7 "~" H 6300 2500 60  0001 C CNN "Manufacturer Part No"
+F 8 "Aliexpress" H 6300 2500 60  0001 C CNN "Supplier 1"
+F 9 "~" H 6300 2500 60  0001 C CNN "Supplier 1 Part No"
+F 10 "0.1" H 6300 2500 60  0001 C CNN "Supplier 1 Cost"
+F 11 "~" H 6300 2500 60  0001 C CNN "Supplier 2"
+F 12 "~" H 6300 2500 60  0001 C CNN "Supplier 2 Part No"
+F 13 "~" H 6300 2500 60  0001 C CNN "Supplier 2 Cost"
+	1    6300 2500
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:LED D6
 U 1 1 5E8ECE36
-P 5800 2300
-F 0 "D6" H 5800 2400 50  0000 C CNN
-F 1 "LED" H 5800 2200 50  0000 C CNN
-F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 5800 2300 50  0001 C CNN
-F 3 "" H 5800 2300 50  0000 C CNN
-F 4 "~" H 5800 2300 60  0000 C CNN "Notes"
-F 5 "5mm White LED ?" H 5800 2300 60  0001 C CNN "Description"
-F 6 "~" H 5800 2300 60  0001 C CNN "Manufacturer"
-F 7 "~" H 5800 2300 60  0001 C CNN "Manufacturer Part No"
-F 8 "Aliexpress" H 5800 2300 60  0001 C CNN "Supplier 1"
-F 9 "~" H 5800 2300 60  0001 C CNN "Supplier 1 Part No"
-F 10 "0.1" H 5800 2300 60  0001 C CNN "Supplier 1 Cost"
-F 11 "~" H 5800 2300 60  0001 C CNN "Supplier 2"
-F 12 "~" H 5800 2300 60  0001 C CNN "Supplier 2 Part No"
-F 13 "~" H 5800 2300 60  0001 C CNN "Supplier 2 Cost"
-	1    5800 2300
+P 6600 2500
+F 0 "D6" H 6600 2600 50  0000 C CNN
+F 1 "LED" H 6600 2400 50  0000 C CNN
+F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 6600 2500 50  0001 C CNN
+F 3 "" H 6600 2500 50  0000 C CNN
+F 4 "~" H 6600 2500 60  0000 C CNN "Notes"
+F 5 "5mm White LED ?" H 6600 2500 60  0001 C CNN "Description"
+F 6 "~" H 6600 2500 60  0001 C CNN "Manufacturer"
+F 7 "~" H 6600 2500 60  0001 C CNN "Manufacturer Part No"
+F 8 "Aliexpress" H 6600 2500 60  0001 C CNN "Supplier 1"
+F 9 "~" H 6600 2500 60  0001 C CNN "Supplier 1 Part No"
+F 10 "0.1" H 6600 2500 60  0001 C CNN "Supplier 1 Cost"
+F 11 "~" H 6600 2500 60  0001 C CNN "Supplier 2"
+F 12 "~" H 6600 2500 60  0001 C CNN "Supplier 2 Part No"
+F 13 "~" H 6600 2500 60  0001 C CNN "Supplier 2 Cost"
+	1    6600 2500
 	0    -1   1    0   
 $EndComp
 $Comp
 L Device:LED D7
 U 1 1 5E8EFE56
-P 5500 2950
-F 0 "D7" H 5500 3050 50  0000 C CNN
-F 1 "LED" H 5500 2850 50  0000 C CNN
-F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 5500 2950 50  0001 C CNN
-F 3 "" H 5500 2950 50  0000 C CNN
-F 4 "~" H 5500 2950 60  0000 C CNN "Notes"
-F 5 "5mm White LED ?" H 5500 2950 60  0001 C CNN "Description"
-F 6 "~" H 5500 2950 60  0001 C CNN "Manufacturer"
-F 7 "~" H 5500 2950 60  0001 C CNN "Manufacturer Part No"
-F 8 "Aliexpress" H 5500 2950 60  0001 C CNN "Supplier 1"
-F 9 "~" H 5500 2950 60  0001 C CNN "Supplier 1 Part No"
-F 10 "0.1" H 5500 2950 60  0001 C CNN "Supplier 1 Cost"
-F 11 "~" H 5500 2950 60  0001 C CNN "Supplier 2"
-F 12 "~" H 5500 2950 60  0001 C CNN "Supplier 2 Part No"
-F 13 "~" H 5500 2950 60  0001 C CNN "Supplier 2 Cost"
-	1    5500 2950
+P 6300 3150
+F 0 "D7" H 6300 3250 50  0000 C CNN
+F 1 "LED" H 6300 3050 50  0000 C CNN
+F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 6300 3150 50  0001 C CNN
+F 3 "" H 6300 3150 50  0000 C CNN
+F 4 "~" H 6300 3150 60  0000 C CNN "Notes"
+F 5 "5mm White LED ?" H 6300 3150 60  0001 C CNN "Description"
+F 6 "~" H 6300 3150 60  0001 C CNN "Manufacturer"
+F 7 "~" H 6300 3150 60  0001 C CNN "Manufacturer Part No"
+F 8 "Aliexpress" H 6300 3150 60  0001 C CNN "Supplier 1"
+F 9 "~" H 6300 3150 60  0001 C CNN "Supplier 1 Part No"
+F 10 "0.1" H 6300 3150 60  0001 C CNN "Supplier 1 Cost"
+F 11 "~" H 6300 3150 60  0001 C CNN "Supplier 2"
+F 12 "~" H 6300 3150 60  0001 C CNN "Supplier 2 Part No"
+F 13 "~" H 6300 3150 60  0001 C CNN "Supplier 2 Cost"
+	1    6300 3150
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:LED D8
 U 1 1 5E8F28D9
-P 5800 2950
-F 0 "D8" H 5800 3050 50  0000 C CNN
-F 1 "LED" H 5800 2850 50  0000 C CNN
-F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 5800 2950 50  0001 C CNN
-F 3 "" H 5800 2950 50  0000 C CNN
-F 4 "~" H 5800 2950 60  0000 C CNN "Notes"
-F 5 "5mm White LED ?" H 5800 2950 60  0001 C CNN "Description"
-F 6 "~" H 5800 2950 60  0001 C CNN "Manufacturer"
-F 7 "~" H 5800 2950 60  0001 C CNN "Manufacturer Part No"
-F 8 "Aliexpress" H 5800 2950 60  0001 C CNN "Supplier 1"
-F 9 "~" H 5800 2950 60  0001 C CNN "Supplier 1 Part No"
-F 10 "0.1" H 5800 2950 60  0001 C CNN "Supplier 1 Cost"
-F 11 "~" H 5800 2950 60  0001 C CNN "Supplier 2"
-F 12 "~" H 5800 2950 60  0001 C CNN "Supplier 2 Part No"
-F 13 "~" H 5800 2950 60  0001 C CNN "Supplier 2 Cost"
-	1    5800 2950
+P 6600 3150
+F 0 "D8" H 6600 3250 50  0000 C CNN
+F 1 "LED" H 6600 3050 50  0000 C CNN
+F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 6600 3150 50  0001 C CNN
+F 3 "" H 6600 3150 50  0000 C CNN
+F 4 "~" H 6600 3150 60  0000 C CNN "Notes"
+F 5 "5mm White LED ?" H 6600 3150 60  0001 C CNN "Description"
+F 6 "~" H 6600 3150 60  0001 C CNN "Manufacturer"
+F 7 "~" H 6600 3150 60  0001 C CNN "Manufacturer Part No"
+F 8 "Aliexpress" H 6600 3150 60  0001 C CNN "Supplier 1"
+F 9 "~" H 6600 3150 60  0001 C CNN "Supplier 1 Part No"
+F 10 "0.1" H 6600 3150 60  0001 C CNN "Supplier 1 Cost"
+F 11 "~" H 6600 3150 60  0001 C CNN "Supplier 2"
+F 12 "~" H 6600 3150 60  0001 C CNN "Supplier 2 Part No"
+F 13 "~" H 6600 3150 60  0001 C CNN "Supplier 2 Cost"
+	1    6600 3150
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
@@ -601,35 +493,35 @@ Text HLabel 2950 5600 0    60   Input ~ 0
 LED3
 Text HLabel 2950 5800 0    60   Input ~ 0
 SWITCH
-Text HLabel 4950 850  0    60   Input ~ 0
+Text HLabel 5150 1050 0    60   Input ~ 0
 LED0
-Text HLabel 4950 1450 0    60   Input ~ 0
+Text HLabel 5150 1650 0    60   Input ~ 0
 LED1
-Text HLabel 4950 2050 0    60   Input ~ 0
+Text HLabel 5150 2250 0    60   Input ~ 0
 LED2
-Text HLabel 4950 2650 0    60   Input ~ 0
+Text HLabel 5150 2850 0    60   Input ~ 0
 LED3
-Text HLabel 7700 1750 0    60   Input ~ 0
+Text HLabel 8550 2550 0    60   Input ~ 0
 SWITCH
 $Comp
 L Device:LED D1
 U 1 1 5968E412
-P 5500 1150
-F 0 "D1" H 5500 1250 50  0000 C CNN
-F 1 "LED" H 5500 1050 50  0000 C CNN
-F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 5500 1150 50  0001 C CNN
-F 3 "" H 5500 1150 50  0000 C CNN
-F 4 "~" H 5500 1150 60  0000 C CNN "Notes"
-F 5 "5mm White LED ?" H 5500 1150 60  0001 C CNN "Description"
-F 6 "~" H 5500 1150 60  0001 C CNN "Manufacturer"
-F 7 "~" H 5500 1150 60  0001 C CNN "Manufacturer Part No"
-F 8 "Aliexpress" H 5500 1150 60  0001 C CNN "Supplier 1"
-F 9 "~" H 5500 1150 60  0001 C CNN "Supplier 1 Part No"
-F 10 "0.1" H 5500 1150 60  0001 C CNN "Supplier 1 Cost"
-F 11 "~" H 5500 1150 60  0001 C CNN "Supplier 2"
-F 12 "~" H 5500 1150 60  0001 C CNN "Supplier 2 Part No"
-F 13 "~" H 5500 1150 60  0001 C CNN "Supplier 2 Cost"
-	1    5500 1150
+P 6300 1350
+F 0 "D1" H 6300 1450 50  0000 C CNN
+F 1 "LED" H 6300 1250 50  0000 C CNN
+F 2 "REInnovationFootprint:LED-5MM_larg_pad" H 6300 1350 50  0001 C CNN
+F 3 "" H 6300 1350 50  0000 C CNN
+F 4 "~" H 6300 1350 60  0000 C CNN "Notes"
+F 5 "5mm White LED ?" H 6300 1350 60  0001 C CNN "Description"
+F 6 "~" H 6300 1350 60  0001 C CNN "Manufacturer"
+F 7 "~" H 6300 1350 60  0001 C CNN "Manufacturer Part No"
+F 8 "Aliexpress" H 6300 1350 60  0001 C CNN "Supplier 1"
+F 9 "~" H 6300 1350 60  0001 C CNN "Supplier 1 Part No"
+F 10 "0.1" H 6300 1350 60  0001 C CNN "Supplier 1 Cost"
+F 11 "~" H 6300 1350 60  0001 C CNN "Supplier 2"
+F 12 "~" H 6300 1350 60  0001 C CNN "Supplier 2 Part No"
+F 13 "~" H 6300 1350 60  0001 C CNN "Supplier 2 Cost"
+	1    6300 1350
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -654,80 +546,80 @@ F 13 "~" H 2200 1400 60  0001 C CNN "Supplier 2 Cost"
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4950 850  5500 850 
+	5750 1050 6300 1050
 Wire Wire Line
-	5500 850  5500 1000
+	6300 1050 6300 1200
 Wire Wire Line
-	5500 850  5800 850 
+	6300 1050 6600 1050
 Wire Wire Line
-	5800 850  5800 1000
-Connection ~ 5500 850 
+	6600 1050 6600 1200
+Connection ~ 6300 1050
 Wire Wire Line
-	5500 1300 5500 1450
+	6300 1500 6300 1650
 Wire Wire Line
-	5800 1600 5800 1450
+	6600 1800 6600 1650
 Wire Wire Line
-	5800 1900 5800 2050
+	6600 2100 6600 2250
 Wire Wire Line
-	5500 1850 5500 2050
+	6300 2050 6300 2250
 Wire Wire Line
-	5500 2450 5500 2650
+	6300 2650 6300 2850
 Wire Wire Line
-	5800 2450 5800 2650
+	6600 2650 6600 2850
 Wire Wire Line
-	5500 3100 5500 3300
+	6300 3300 6300 3500
 Wire Wire Line
-	5500 3300 5800 3300
+	6300 3500 6600 3500
 Wire Wire Line
-	5800 3300 5800 3100
+	6600 3500 6600 3300
 Wire Wire Line
-	5800 3300 6150 3300
+	6600 3500 6950 3500
 Wire Wire Line
-	6150 3300 6150 850 
+	6950 3500 6950 1050
 Wire Wire Line
-	6150 850  5800 850 
-Connection ~ 5800 3300
-Connection ~ 5800 850 
+	6950 1050 6600 1050
+Connection ~ 6600 3500
+Connection ~ 6600 1050
 Wire Wire Line
-	4950 1450 5500 1450
-Connection ~ 5500 1450
+	5750 1650 6300 1650
+Connection ~ 6300 1650
 Wire Wire Line
-	5500 1450 5500 1550
+	6300 1650 6300 1750
 Wire Wire Line
-	5500 1450 5800 1450
-Connection ~ 5800 1450
+	6300 1650 6600 1650
+Connection ~ 6600 1650
 Wire Wire Line
-	5800 1450 5800 1300
+	6600 1650 6600 1500
 Wire Wire Line
-	4950 2050 5500 2050
-Connection ~ 5500 2050
+	5750 2250 6300 2250
+Connection ~ 6300 2250
 Wire Wire Line
-	5500 2050 5500 2150
+	6300 2250 6300 2350
 Wire Wire Line
-	5500 2050 5800 2050
-Connection ~ 5800 2050
+	6300 2250 6600 2250
+Connection ~ 6600 2250
 Wire Wire Line
-	5800 2050 5800 2150
+	6600 2250 6600 2350
 Wire Wire Line
-	4950 2650 5500 2650
-Connection ~ 5500 2650
+	5750 2850 6300 2850
+Connection ~ 6300 2850
 Wire Wire Line
-	5500 2650 5500 2800
+	6300 2850 6300 3000
 Wire Wire Line
-	5500 2650 5800 2650
-Connection ~ 5800 2650
+	6300 2850 6600 2850
+Connection ~ 6600 2850
 Wire Wire Line
-	5800 2650 5800 2800
+	6600 2850 6600 3000
 Wire Wire Line
-	7900 2250 7700 2250
+	9100 2900 8900 2900
 Wire Wire Line
-	7700 2250 7700 2600
+	8900 2900 8900 3250
 Wire Wire Line
-	7700 1750 7700 2150
+	8900 2400 8900 2550
 Wire Wire Line
-	7700 2150 7900 2150
+	8900 2800 9100 2800
 Wire Notes Line
-	6800 3950 6800 500 
+	7550 3950 7550 500 
 $Comp
 L matts_components:ISP_3X2 P2
 U 1 1 5E91BF92
@@ -747,4 +639,95 @@ Wire Wire Line
 	3250 4950 3650 4950
 Connection ~ 1750 1400
 Connection ~ 1750 2150
+$Comp
+L Device:R R5
+U 1 1 5E8F8782
+P 8900 2250
+F 0 "R5" H 8970 2296 50  0000 L CNN
+F 1 "100k" H 8970 2205 50  0000 L CNN
+F 2 "REInnovationFootprint:R3-LARGE_PADS_0_8_hole" V 8830 2250 50  0001 C CNN
+F 3 "~" H 8900 2250 50  0001 C CNN
+	1    8900 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR03
+U 1 1 5E8F920C
+P 8900 1850
+F 0 "#PWR03" H 8900 1700 50  0001 C CNN
+F 1 "VCC" H 8900 2000 50  0000 C CNN
+F 2 "" H 8900 1850 50  0000 C CNN
+F 3 "" H 8900 1850 50  0000 C CNN
+	1    8900 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 2100 8900 1850
+Wire Wire Line
+	8550 2550 8900 2550
+Connection ~ 8900 2550
+Wire Wire Line
+	8900 2550 8900 2800
+$Comp
+L Device:R R2
+U 1 1 5E907AC1
+P 5600 1650
+F 0 "R2" V 5393 1650 50  0000 C CNN
+F 1 "120" V 5484 1650 50  0000 C CNN
+F 2 "REInnovationFootprint:R3-LARGE_PADS_0_8_hole" V 5530 1650 50  0001 C CNN
+F 3 "~" H 5600 1650 50  0001 C CNN
+	1    5600 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E90AB54
+P 5600 1050
+F 0 "R1" V 5393 1050 50  0000 C CNN
+F 1 "120" V 5484 1050 50  0000 C CNN
+F 2 "REInnovationFootprint:R3-LARGE_PADS_0_8_hole" V 5530 1050 50  0001 C CNN
+F 3 "~" H 5600 1050 50  0001 C CNN
+	1    5600 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E90B724
+P 5600 2250
+F 0 "R3" V 5393 2250 50  0000 C CNN
+F 1 "120" V 5484 2250 50  0000 C CNN
+F 2 "REInnovationFootprint:R3-LARGE_PADS_0_8_hole" V 5530 2250 50  0001 C CNN
+F 3 "~" H 5600 2250 50  0001 C CNN
+	1    5600 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5E90C088
+P 5600 2850
+F 0 "R4" V 5393 2850 50  0000 C CNN
+F 1 "120" V 5484 2850 50  0000 C CNN
+F 2 "REInnovationFootprint:R3-LARGE_PADS_0_8_hole" V 5530 2850 50  0001 C CNN
+F 3 "~" H 5600 2850 50  0001 C CNN
+	1    5600 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 2850 5450 2850
+Wire Wire Line
+	5150 2250 5450 2250
+Wire Wire Line
+	5150 1650 5450 1650
+Wire Wire Line
+	5150 1050 5450 1050
+Wire Wire Line
+	2950 5600 3400 5600
+Wire Wire Line
+	2950 5700 3250 5700
+Wire Wire Line
+	2950 5800 3300 5800
+Wire Wire Line
+	2950 5900 3500 5900
+Wire Wire Line
+	2950 6000 3500 6000
 $EndSCHEMATC

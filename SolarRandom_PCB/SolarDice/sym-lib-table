@@ -1,3 +1,2 @@
 (sym_lib_table
-  (lib (name SolarSpinner-cache)(type Legacy)(uri ${KIPRJMOD}/SolarSpinner-cache.lib)(options "")(descr ""))
 )

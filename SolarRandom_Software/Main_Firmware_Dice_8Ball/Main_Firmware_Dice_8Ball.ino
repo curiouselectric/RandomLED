@@ -25,7 +25,7 @@
 #define pinLED3 PB4
 #define sw      PB2
 
-#define DICE   0   // Set this 1 = DICE and 0 = 8 BALL
+#define DICE   1   // Set this 1 = DICE and 0 = 8 BALL
 
 int n = 0;
 int displayTime = 500;  // The time to display the dice number
@@ -55,7 +55,14 @@ void loop() {
     timer2 = millis();
     while (millis() <= timer2 + flashTime)  // This is the length of time the LEDs flash for
     {
-      setLED(n);      // This scrolls through the LEDs to show a 'shake'
+      if(DICE==1)
+      {
+        numberToDice(n);      // This scrolls through the LEDs to show a 'shake'
+      }
+      else
+      {
+        setLED(n);      // This scrolls through the LEDs to show a 'shake'
+      }
     }
     n++;
     if (DICE == 1)
@@ -71,12 +78,12 @@ void loop() {
       {
         n = 0;
       }
-    }
+    }  
   }
 
   timer1 = millis();
   int randNumber;
-
+  
   if (DICE == 1)
   {
     randNumber  = random(1, 7);
@@ -228,29 +235,35 @@ void numberToDice(int n)
   switch (n)
   {
     case 1:
-      setLED(6);
+      setLED(7);
       break;
     case 2:
-      setLED(1);
-      setLED(4);
+      setLED(5);
+      setLED(0);
       break;
     case 3:
-      setLED(0);
-      setLED(5);
-      setLED(6);
+      setLED(2);
+      setLED(3);
+      setLED(7);
       break;
     case 4:
+      setLED(2);
+      clearLED();
       setLED(0);
-      setLED(1);
-      setLED(4);
+      clearLED();
+      setLED(3);
+      clearLED();
       setLED(5);
       break;
     case 5:
       setLED(0);
-      setLED(1);
-      setLED(4);
+      clearLED();
+      setLED(2);
+      clearLED();
+      setLED(3);
+      clearLED();      
       setLED(5);
-      setLED(6);
+      setLED(7);
       break;
     case 6:
       setLED(0);

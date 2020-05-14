@@ -48,7 +48,7 @@ U 1 1 58A4A9B1
 P 6350 7300
 F 0 "P5" H 6350 7400 50  0000 C CNN
 F 1 "LOGO1" V 6200 7300 50  0000 C CNN
-F 2 "CuriousElectric3:CEC_Globe_10mm_FCU" H 6350 7300 50  0001 C CNN
+F 2 "CuriousElectric3:2020_04_14_CuriousElectricCompany_Logo_Round_15mm_BCu" H 6350 7300 50  0001 C CNN
 F 3 "" H 6350 7300 50  0000 C CNN
 	1    6350 7300
 	0    -1   1    0   
@@ -89,8 +89,6 @@ Wire Wire Line
 	3450 2150 3450 2250
 NoConn ~ 6350 7500
 NoConn ~ 6650 7500
-Wire Wire Line
-	1400 2150 1750 2150
 Wire Wire Line
 	2350 1400 2800 1400
 $Comp
@@ -170,17 +168,6 @@ F 3 "" H 6400 6200 50  0000 C CNN
 	1    6400 6200
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x02_Female P1
-U 1 1 58FDE60A
-P 1200 1750
-F 0 "P1" H 1200 1900 50  0000 C CNN
-F 1 "SOLAR" V 1300 1750 50  0000 C CNN
-F 2 "REInnovationFootprint:Pin_Header_Straight_1x02" H 1200 1750 50  0001 C CNN
-F 3 "" H 1200 1750 50  0000 C CNN
-	1    1200 1750
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	6200 5600 6400 5600
 Wire Wire Line
@@ -202,10 +189,6 @@ F 3 "" H 8900 3250 50  0000 C CNN
 	1    8900 3250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1400 1750 1400 1400
-Wire Wire Line
-	1400 1850 1400 2150
 $Comp
 L power:VCC #PWR05
 U 1 1 58FDF957
@@ -251,7 +234,7 @@ U 1 1 5917491E
 P 6050 7300
 F 0 "P4" H 6050 7400 50  0000 C CNN
 F 1 "HOLES" V 5900 7300 50  0000 C CNN
-F 2 "REInnovationFootprint:PCB_Holes_40x50" H 6050 7300 50  0001 C CNN
+F 2 "REInnovationFootprint:SolarDicePCB" H 6050 7300 50  0001 C CNN
 F 3 "" H 6050 7300 50  0000 C CNN
 F 4 "~" H 6050 7300 60  0001 C CNN "Description"
 F 5 "~" H 6050 7300 60  0001 C CNN "Notes"
@@ -305,8 +288,8 @@ L Device:Solar_Cells SC1
 U 1 1 58A49F68
 P 1750 1850
 F 0 "SC1" H 1850 1950 50  0000 L CNN
-F 1 "PV_CELL" H 1850 1850 50  0000 L CNN
-F 2 "REInnovationFootprint:PV_50x30mm_round" V 1750 1910 50  0001 C CNN
+F 1 "SOLAR PV" H 1850 1850 50  0000 L CNN
+F 2 "REInnovationFootprint:PV_53x30mm_Area" V 1750 1910 50  0001 C CNN
 F 3 "" V 1750 1910 50  0000 C CNN
 F 4 "~" H 1750 1850 60  0000 C CNN "Notes"
 F 5 "53x30mm 30mA 5V PV module" H 1750 1850 60  0001 C CNN "Description"
@@ -327,7 +310,7 @@ U 1 1 58FDE4BD
 P 9300 2800
 F 0 "P6" H 9300 2950 50  0000 C CNN
 F 1 "SWITCH" V 9200 2750 50  0000 C CNN
-F 2 "REInnovationFootprint:SIL-2_screw_terminal" H 9300 2800 50  0001 C CNN
+F 2 "REInnovationFootprint:TH_SW_SW200D" H 9300 2800 50  0001 C CNN
 F 3 "" H 9300 2800 50  0000 C CNN
 	1    9300 2800
 	-1   0    0    -1  
@@ -458,8 +441,6 @@ F 13 "~" H 6300 3150 60  0001 C CNN "Supplier 2 Cost"
 	1    6300 3150
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1400 1400 1750 1400
 Wire Wire Line
 	2800 2150 3450 2150
 Wire Wire Line
@@ -606,8 +587,6 @@ Wire Wire Line
 	3300 5050 3650 5050
 Wire Wire Line
 	3250 4950 3650 4950
-Connection ~ 1750 1400
-Connection ~ 1750 2150
 $Comp
 L Device:R R5
 U 1 1 5E8F8782

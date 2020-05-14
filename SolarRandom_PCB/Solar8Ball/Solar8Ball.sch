@@ -2,9 +2,32 @@ EESchema Schematic File Version 4
 LIBS:SolarSpinner-rescue
 LIBS:power
 LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:regul
 LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
 LIBS:audio
 LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:Solar8Ball-cache
 EELAYER 29 0
 EELAYER END
@@ -48,7 +71,7 @@ U 1 1 58A4A9B1
 P 6350 7300
 F 0 "P5" H 6350 7400 50  0000 C CNN
 F 1 "LOGO1" V 6200 7300 50  0000 C CNN
-F 2 "CuriousElectric3:CEC_Globe_10mm_FCU" H 6350 7300 50  0001 C CNN
+F 2 "CuriousElectric3:2020_04_14_CuriousElectricCompany_Logo_Round_15mm_BCu" H 6350 7300 50  0001 C CNN
 F 3 "" H 6350 7300 50  0000 C CNN
 	1    6350 7300
 	0    -1   1    0   
@@ -89,8 +112,6 @@ Wire Wire Line
 	3450 2150 3450 2250
 NoConn ~ 6350 7500
 NoConn ~ 6650 7500
-Wire Wire Line
-	1400 2150 1750 2150
 Wire Wire Line
 	2350 1400 2800 1400
 $Comp
@@ -170,17 +191,6 @@ F 3 "" H 6400 6200 50  0000 C CNN
 	1    6400 6200
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x02_Female P1
-U 1 1 58FDE60A
-P 1200 1750
-F 0 "P1" H 1200 1900 50  0000 C CNN
-F 1 "SOLAR" V 1300 1750 50  0000 C CNN
-F 2 "REInnovationFootprint:Pin_Header_Straight_1x02" H 1200 1750 50  0001 C CNN
-F 3 "" H 1200 1750 50  0000 C CNN
-	1    1200 1750
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	6200 5600 6400 5600
 Wire Wire Line
@@ -202,10 +212,6 @@ F 3 "" H 8900 3250 50  0000 C CNN
 	1    8900 3250
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1400 1750 1400 1400
-Wire Wire Line
-	1400 1850 1400 2150
 $Comp
 L power:VCC #PWR05
 U 1 1 58FDF957
@@ -251,7 +257,7 @@ U 1 1 5917491E
 P 6050 7300
 F 0 "P4" H 6050 7400 50  0000 C CNN
 F 1 "HOLES" V 5900 7300 50  0000 C CNN
-F 2 "REInnovationFootprint:PCB_Holes_40x50" H 6050 7300 50  0001 C CNN
+F 2 "REInnovationFootprint:PCB_Circle_100mm_BSS" H 6050 7300 50  0001 C CNN
 F 3 "" H 6050 7300 50  0000 C CNN
 F 4 "~" H 6050 7300 60  0001 C CNN "Description"
 F 5 "~" H 6050 7300 60  0001 C CNN "Notes"
@@ -305,8 +311,8 @@ L Device:Solar_Cells SC1
 U 1 1 58A49F68
 P 1750 1850
 F 0 "SC1" H 1850 1950 50  0000 L CNN
-F 1 "PV_CELL" H 1850 1850 50  0000 L CNN
-F 2 "REInnovationFootprint:PV_50x30mm_round" V 1750 1910 50  0001 C CNN
+F 1 "SOLAR PV" H 1850 1850 50  0000 L CNN
+F 2 "REInnovationFootprint:PV_53x30mm_Area" V 1750 1910 50  0001 C CNN
 F 3 "" V 1750 1910 50  0000 C CNN
 F 4 "~" H 1750 1850 60  0000 C CNN "Notes"
 F 5 "53x30mm 30mA 5V PV module" H 1750 1850 60  0001 C CNN "Description"
@@ -327,13 +333,13 @@ U 1 1 58FDE4BD
 P 9300 2800
 F 0 "P6" H 9300 2950 50  0000 C CNN
 F 1 "SWITCH" V 9200 2750 50  0000 C CNN
-F 2 "REInnovationFootprint:SIL-2_screw_terminal" H 9300 2800 50  0001 C CNN
+F 2 "REInnovationFootprint:TH_SW_SW200D" H 9300 2800 50  0001 C CNN
 F 3 "" H 9300 2800 50  0000 C CNN
 	1    9300 2800
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Device:LED D2
+L Solar8Ball-rescue:LED-Device D2
 U 1 1 5E8E2B23
 P 6600 1350
 F 0 "D2" H 6600 1450 50  0000 C CNN
@@ -354,7 +360,7 @@ F 13 "~" H 6600 1350 60  0001 C CNN "Supplier 2 Cost"
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:LED D3
+L Solar8Ball-rescue:LED-Device D3
 U 1 1 5E8E54E3
 P 6300 1900
 F 0 "D3" H 6300 2000 50  0000 C CNN
@@ -375,7 +381,7 @@ F 13 "~" H 6300 1900 60  0001 C CNN "Supplier 2 Cost"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED D4
+L Solar8Ball-rescue:LED-Device D4
 U 1 1 5E8E7E09
 P 6600 1950
 F 0 "D4" H 6600 2050 50  0000 C CNN
@@ -396,7 +402,7 @@ F 13 "~" H 6600 1950 60  0001 C CNN "Supplier 2 Cost"
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:LED D5
+L Solar8Ball-rescue:LED-Device D5
 U 1 1 5E8EA548
 P 6300 2500
 F 0 "D5" H 6300 2600 50  0000 C CNN
@@ -417,7 +423,7 @@ F 13 "~" H 6300 2500 60  0001 C CNN "Supplier 2 Cost"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED D6
+L Solar8Ball-rescue:LED-Device D6
 U 1 1 5E8ECE36
 P 6600 2500
 F 0 "D6" H 6600 2600 50  0000 C CNN
@@ -438,7 +444,7 @@ F 13 "~" H 6600 2500 60  0001 C CNN "Supplier 2 Cost"
 	0    -1   1    0   
 $EndComp
 $Comp
-L Device:LED D7
+L Solar8Ball-rescue:LED-Device D7
 U 1 1 5E8EFE56
 P 6300 3150
 F 0 "D7" H 6300 3250 50  0000 C CNN
@@ -459,7 +465,7 @@ F 13 "~" H 6300 3150 60  0001 C CNN "Supplier 2 Cost"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:LED D8
+L Solar8Ball-rescue:LED-Device D8
 U 1 1 5E8F28D9
 P 6600 3150
 F 0 "D8" H 6600 3250 50  0000 C CNN
@@ -479,8 +485,6 @@ F 13 "~" H 6600 3150 60  0001 C CNN "Supplier 2 Cost"
 	1    6600 3150
 	0    -1   1    0   
 $EndComp
-Wire Wire Line
-	1400 1400 1750 1400
 Wire Wire Line
 	2800 2150 3450 2150
 Wire Wire Line
@@ -504,7 +508,7 @@ LED3
 Text HLabel 8550 2550 0    60   Input ~ 0
 SWITCH
 $Comp
-L Device:LED D1
+L Solar8Ball-rescue:LED-Device D1
 U 1 1 5968E412
 P 6300 1350
 F 0 "D1" H 6300 1450 50  0000 C CNN
@@ -637,8 +641,6 @@ Wire Wire Line
 	3300 5050 3650 5050
 Wire Wire Line
 	3250 4950 3650 4950
-Connection ~ 1750 1400
-Connection ~ 1750 2150
 $Comp
 L Device:R R5
 U 1 1 5E8F8782
@@ -730,4 +732,25 @@ Wire Wire Line
 	2950 5900 3500 5900
 Wire Wire Line
 	2950 6000 3500 6000
+$Comp
+L Connector:Conn_01x01_Male P1
+U 1 1 5E9372E3
+P 5750 7300
+F 0 "P1" H 5750 7400 50  0000 C CNN
+F 1 "PCB_TEXT" V 5600 7300 50  0000 C CNN
+F 2 "CuriousElectric3:Solar8Ball_Word_Mask3" H 5750 7300 50  0001 C CNN
+F 3 "" H 5750 7300 50  0000 C CNN
+F 4 "~" H 5750 7300 60  0001 C CNN "Description"
+F 5 "~" H 5750 7300 60  0001 C CNN "Notes"
+F 6 "~" H 5750 7300 60  0001 C CNN "Manufacturer"
+F 7 "~" H 5750 7300 60  0001 C CNN "Manufacturer Part No"
+F 8 "~" H 5750 7300 60  0001 C CNN "Supplier 1"
+F 9 "~" H 5750 7300 60  0001 C CNN "Supplier 1 Part No"
+F 10 "~" H 5750 7300 60  0001 C CNN "Supplier 2"
+F 11 "~" H 5750 7300 60  0001 C CNN "Supplier 2 Part No"
+F 12 "~" H 5750 7300 60  0001 C CNN "Cost"
+	1    5750 7300
+	0    -1   1    0   
+$EndComp
+NoConn ~ 5750 7500
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=09/04/2020 15:40:21
+update=10/05/2020 16:51:45
 version=1
 last_client=kicad
 [cvpcb]
@@ -43,16 +43,6 @@ LibName30=valves
 LibName31=D:/Google Drive/KiCAD/KiCad My Libraries/matts_components
 LibName32=E:/Google Drive/KiCAD/KiCad My Libraries/matts_components
 LibName33=E:/Google Drive/KiCAD/kicad_reinnovation/KiCad My Libraries/matts_components
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=60
-ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -99,3 +89,13 @@ SolderMaskClearance=0.2
 SolderMaskMinWidth=0
 SolderPasteClearance=0
 SolderPasteRatio=0
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1

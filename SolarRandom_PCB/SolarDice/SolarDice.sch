@@ -2,9 +2,32 @@ EESchema Schematic File Version 4
 LIBS:SolarSpinner-rescue
 LIBS:power
 LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:regul
 LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
 LIBS:audio
 LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:SolarDice-cache
 EELAYER 29 0
 EELAYER END
@@ -26,7 +49,7 @@ U 1 1 58A49EA0
 P 2800 1850
 F 0 "C1" H 2825 1950 50  0000 L CNN
 F 1 "0.47F" H 2825 1750 50  0000 L CNN
-F 2 "REInnovationFootprint:C_0_47F_SuperCap" H 2838 1700 50  0001 C CNN
+F 2 "REInnovationFootprint:C_0_47F_SuperCap_2POS" H 2838 1700 50  0001 C CNN
 F 3 "" H 2800 1850 50  0000 C CNN
 F 4 "~" H 2800 1850 60  0001 C CNN "Notes"
 F 5 "~" H 2800 1850 60  0001 C CNN "Description"

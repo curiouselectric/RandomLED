@@ -1,4 +1,4 @@
-648443807946111
+650047479609878
 CuriousElectric3
 2019_011_16_CuriousElectricCompany_Logo_Round_Logo_No_words_KiCAD
 
@@ -2175,6 +2175,13 @@ C_0_47F_SuperCap
 
 0
 2
+2
+REInnovationFootprint
+C_0_47F_SuperCap_2POS
+
+
+0
+3
 2
 REInnovationFootprint
 C_1F_SuperCap

@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source "G:\\My Drive\\Work - Kits\\PRODUCTS\\Prototype\\Solar 8-Ball\\Solar_8_Ball_Public\\RandomLED\\SolarRandom_PCB\\Solar8Ball\\Solar8Ball.sch")
-    (date "16/04/2020 11:26:58")
+    (source "G:\\My Drive\\Work - Kits\\PRODUCTS\\Production\\Solar 8-Ball\\Solar_8_Ball_Public\\RandomLED\\SolarRandom_PCB\\Solar8Ball\\Solar8Ball.sch")
+    (date "18/05/2020 20:26:50")
     (tool "Eeschema (5.1.0)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -17,7 +17,7 @@
   (components
     (comp (ref C1)
       (value 0.47F)
-      (footprint REInnovationFootprint:C_0_47F_SuperCap)
+      (footprint REInnovationFootprint:C_0_47F_SuperCap_2POS)
       (fields
         (field (name Cost) ~)
         (field (name Description) ~)
@@ -451,7 +451,7 @@
     (library (logical Device)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Device.lib"))
     (library (logical Solar8Ball-rescue)
-      (uri "G:\\My Drive\\Work - Kits\\PRODUCTS\\Prototype\\Solar 8-Ball\\Solar_8_Ball_Public\\RandomLED\\SolarRandom_PCB\\Solar8Ball/Solar8Ball-rescue.lib"))
+      (uri "G:\\My Drive\\Work - Kits\\PRODUCTS\\Production\\Solar 8-Ball\\Solar_8_Ball_Public\\RandomLED\\SolarRandom_PCB\\Solar8Ball/Solar8Ball-rescue.lib"))
     (library (logical matts_components)
       (uri "G:/My Drive/KiCAD/kicad_reinnovation/KiCad My Libraries/matts_components.lib")))
   (nets
